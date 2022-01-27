@@ -65,6 +65,9 @@ h3{
         font-size: 1.875rem;
         font-family: 'Fredoka One', cursive;
     }
+    header nav ul li:hover{
+            
+    }
 
     /* Configuracion del logo principal */
     .logoPrincipal{
