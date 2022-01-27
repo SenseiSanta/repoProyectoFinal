@@ -8,9 +8,17 @@
 /* Importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
-
+/* KEYFRAMES */
+    /* Headshake */
+    @keyframes headshake{
+        0%   { transform: scale(1.1) rotate(10deg); }
+        25%  { transform: rotate(-10deg); }
+        50%  { transform: rotate(10deg); }
+        75%  { transform: rotate(-10deg); }
+        100% { transform: rotate(0deg); }
+    }
+    
 /* CORRECCIONES GENERALES */
-
 
 body{
     background-color: /*#09072f*/ white;
@@ -64,6 +72,7 @@ h3{
         list-style: none;
         font-size: 1.875rem;
         font-family: 'Fredoka One', cursive;
+        transition-duration: 0.5s;
     }
 
     /* hover en HEADER */
@@ -129,6 +138,9 @@ h3{
         right: 0;
         font-size: 1.125rem;
     }
+        .contactButtonBox:hover{
+            animation-name: headshake 3s;
+        }
 
     /* Arreglo del sobre en el boton de contacto - NO TOCAR */
         .fixedLetter {
@@ -192,6 +204,9 @@ h3{
             align-items: center;
             display: flex;
         }
+            .footerImgWebsites:hover {
+                animation: headshake 1s;
+            }  
 
         /* Correcciones texto de footer */
         .centerText{
