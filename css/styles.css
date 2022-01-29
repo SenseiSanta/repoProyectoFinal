@@ -10,8 +10,10 @@
     background-color: rgba(169, 109, 189, 0.671);
 }
 
+
 /* Importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
 
 /* KEYFRAMES */
     /* Headshake */
@@ -21,9 +23,11 @@
         50%  { transform: scale(1.06) rotate(10deg); }
         75%  { transform: scale(1.03) rotate(-10deg); }
         100% { transform: scale(1) rotate(0deg); }
-    }
+}
     
+
 /* CORRECCIONES GENERALES */
+
 
 body{
     background-color: /*#09072f*/ white;
@@ -81,14 +85,14 @@ h3{
     }
 
     /* hover en HEADER */
-    header nav ul li:hover{
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-    header nav ul li a:hover{
-        color: rgb(152, 151, 156);
-        text-decoration: underline;
-    }
+        header nav ul li:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        header nav ul li a:hover{
+            color: rgb(152, 151, 156);
+            text-decoration: underline;
+        }
 
     /* Configuracion del logo principal */
     .logoPrincipal{
@@ -122,17 +126,21 @@ h3{
             height: 100vh;
         }
 
+        /* Items en lista del menu responsive */
         .menuResponsive li{
             font-size: 2rem;
         }
 
+        /* Boton de ingreso al menu responsive */
         nav ul li button{
             display: block;
             background-color: black;
             border: none;
 }
 
+
 /* CONFIGURACION DEL BOTON DE CONTACTO */
+
 
     /*Caja contenedora del boton de contacto */
         .contactButtonBox{
@@ -143,11 +151,12 @@ h3{
         right: 0;
         font-size: 1.125rem;
     }
+        /* Hover en el boton de contacto */
         .contactButtonBox:hover{
             animation: headshake 1s;
         }
 
-    /* Arreglo del sobre en el boton de contacto - NO TOCAR */
+    /* Arreglo del sobre en el boton de contacto */
         .fixedLetter {
             font-size: 1.5rem;
             padding-bottom: 3px;
@@ -218,7 +227,6 @@ h3{
         .centerText{
             text-align: center;
 }
-
 
 
 /* --------------- INDEX.html --------------- */
@@ -316,7 +324,7 @@ h3{
             padding: 10px;
         }
 
-        /* Correccion del tamanio de los select e input */
+        /* Correccion del tamaño de los select e input */
             .labelInfo select{
                 width: 180px;
             }
@@ -328,10 +336,6 @@ h3{
         .contactForm fieldset div{
             padding: 8px 0px;
         }
-
-        /* Correccion de label de comentario */
-        /*.labelCorrection{
-        }*/
 
         /* Espacio y formato del textarea, escritura dentro del comentario */
         textarea{
@@ -349,17 +353,18 @@ h3{
             padding-right: 10px;
         }
 
-        /* Configuracion del espacio de botones de resolucion del formulario */
+        /* Configuracion del espacio de botones dresolutivos del formulario (send y reset) */
         .labelButtons{
             display: flex;
             justify-content: space-evenly;
         }
 
+        /* Configuracion de los botones resolutivos del formulario (send y reset) */
         .labelButtons input{
             width: 70px;
-        }
+    }
 
-
+    /* Configuracion del espacio de la suscripcion en contacto */
     .subscriptionBanner{
         background-color: #79018C;
         height: 40px;
@@ -417,6 +422,7 @@ h3{
         margin: 3px 8px;
     }
 
+    /* Configuracion de los botones en la galeria responsive */
     .responsiveGallery{
         display: none;
         background: rgb(0,0,0);
@@ -456,18 +462,19 @@ h3{
                                  "resultsTour";
         }
 
-            .datesTour{
-                grid-area: datesTour;
-                height: 200px;
-            }
-            .filterTour{
-                grid-area: filterTour;
-                height: 200px;
-            }
-            .resultsTour{
-                grid-area: resultsTour;
-                height: 200px;
-            }
+            /* Especificaciones para orden grid */
+                .datesTour{
+                    grid-area: datesTour;
+                    height: 200px;
+                }
+                .filterTour{
+                    grid-area: filterTour;
+                    height: 200px;
+                }
+                .resultsTour{
+                    grid-area: resultsTour;
+                    height: 200px;
+                }
         
         /* Division de la caja de filtro de imagenes aleatorias (derecha) */ 
         .sectionTour2{
@@ -483,8 +490,8 @@ h3{
 }
 
 
-
 /* --------------- SHOP.html --------------- */
+
 
     /* Division principal del shop */
     .orderShop{
@@ -532,10 +539,9 @@ h3{
 }
         
 
-
-
-
 /* --------------- MUSIC.html --------------- */
+
+
     
     /* Cajas de albums musicales */
     .containerAlbum{
@@ -613,19 +619,19 @@ h3{
             flex-direction: column;
         }
 
-        /* hover en HEADER (no responsive)*/
-        header nav ul li:hover{
-            transform: none;
-        }
-        header nav ul li a:hover{
-            color: rgb(255, 255, 255);
-            text-decoration: none
-        }
+        /* hover en HEADER (no responsive) */
+            header nav ul li:hover{
+                transform: none;
+            }
+            header nav ul li a:hover{
+                color: rgb(255, 255, 255);
+                text-decoration: none
+            }
 }
 
 
 /*
-/* ======================= ARREGLO MONITORES ======================= */
+/* ========================= ARREGLO MONITORES ========================= */
 
     @media only screen and (max-width: 1400px){
         
@@ -637,10 +643,11 @@ h3{
             font-size: 1rem;
         }
 
+
         /* ---------------INDEX--------------- */
 
 
-            /* Posicion de las iamgenes de los fragmentos */
+            /* Posicion de las imágenes de los fragmentos */
                 .imageLeft {
                     position: static;
                     grid-area: imageLeft;
@@ -651,11 +658,13 @@ h3{
                     grid-area: imageRight;
                 }
 
+            /* Descripcion de los iframe para grid */
             .snippetBox iframe{
                 grid-area: iframe;
                 text-align: center;
             }
 
+            /* Configuracion responsive de las imágenes de la biografía */
             .imageCorrection{
                 display: flex;
                 justify-content: center;
@@ -676,7 +685,7 @@ h3{
 }
 
 
-/* ======================= TABLETS ======================= */
+/* ========================= TABLETS ========================= */
 
 
     @media only screen and (max-width: 720px){
@@ -687,7 +696,6 @@ h3{
 
         
         /* CONFIGURACION DEL FOOTER (720px)  */
-
 
             footer{
                 height: 100px;
@@ -722,6 +730,7 @@ h3{
 
         /* --------------- INDEX.html (720px)  --------------- */
 
+
             /* Division del contenido del index */
                 /* Division principal */
                     .biography{
@@ -738,12 +747,15 @@ h3{
 
          /* --------------- CONTACT.html (720px) --------------- */
 
+
          /* Configuracion de los label dentro del formulario */
         .contactForm label{
             width: 150px;
         }
 
+
          /* --------------- GALLERY.html (720px)  --------------- */
+
 
             /* Configuracion individual de las imagenes */
             .galleryImage{
@@ -751,15 +763,19 @@ h3{
                 height: 250px;
         }
 
+
         /* --------------- MUSIC.html (720px) --------------- */
+
 
             /* Contenedor de video */
             .lastVideo{
                 height: 400px;
             }
 
+
         /* --------------- TOUR.html (720px) --------------- */
             
+
         /* Division de la caja de filtro de busqueda (izquierda) */
             .sectionTour1{
                 width: 100%;
@@ -771,7 +787,7 @@ h3{
     }
 }
 
-/* ======================= CELULARES ======================= */
+/* ========================= CELULARES ========================= */
 
 
     @media only screen and (max-width: 480px){
@@ -801,6 +817,7 @@ h3{
 
         /* --------------- INDEX.html (480px)  --------------- */
 
+
             /* Cajas de los fragmentos */
             .snippetBox {
                 margin: 0;
@@ -823,9 +840,9 @@ h3{
         }
         
 
-
         /* --------------- GALLERY.html (480px)  --------------- */
         
+
             /* Configuracion individual de las imagenes */
             .galleryImage{
                 margin: 25px;
@@ -847,8 +864,10 @@ h3{
                 height: 1.25rem;
                 margin: 3px 5px;
         }
+
         
         /* --------------- SHOP.html (480px)  --------------- */
+
 
             /* Division principal del shop */
             .orderShop{
@@ -858,45 +877,55 @@ h3{
                                      "filter"
                                      "shop";
             }  
-
+            
+            /* Espacio del filtro del shop */
             .filterShop{
                 height: 100px;
             }
 
+            /* Boton de oferta del shop */
             .offerBannerButton{
                 font-size: 2em;
         }
 
+
         /* --------------- MUSIC.html (480px)  --------------- */
 
+
+            /* Configuracion de la caja del video en pantalla */
             .lastVideo{
                 padding: 0;
                 height: 300px;
             }
             
+            /* Configuracion del video en pantalla */
             .lastVideo iframe{
                 width: 100%;
                 height: 300px;
             }
 
+            /* Configuracion de las cartas de albums */
             .album{
                 width: 120px;
                 height: 180px;
                 margin: 20px;
             }
         
+
         /* --------------- CONTACT.html (480px)  --------------- */
 
-        .labelInfo{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        .contactForm label{
-            text-align: center;
-            font-size: 1.3em;
-            padding-bottom: 10px;
-        }
+            /* Reorganizacion de los label */
+            .labelInfo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
+            /* Configuracion de los textos label */
+            .contactForm label{
+                text-align: center;
+                font-size: 1.3em;
+                padding-bottom: 10px;
+            }
 }
