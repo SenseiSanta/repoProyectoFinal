@@ -5,6 +5,11 @@
     border: none;
 }
 
+*::selection{
+    color: #56007e;
+    background-color: rgba(169, 109, 189, 0.671);
+}
+
 /* Importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
@@ -12,10 +17,10 @@
     /* Headshake */
     @keyframes headshake{
         0%   { transform: scale(1.1) rotate(10deg); }
-        25%  { transform: rotate(-10deg); }
-        50%  { transform: rotate(10deg); }
-        75%  { transform: rotate(-10deg); }
-        100% { transform: rotate(0deg); }
+        25%  { transform: scale(1.08) rotate(-10deg); }
+        50%  { transform: scale(1.06) rotate(10deg); }
+        75%  { transform: scale(1.03) rotate(-10deg); }
+        100% { transform: scale(1) rotate(0deg); }
     }
     
 /* CORRECCIONES GENERALES */
@@ -139,7 +144,7 @@ h3{
         font-size: 1.125rem;
     }
         .contactButtonBox:hover{
-            animation-name: headshake 3s;
+            animation: headshake 1s;
         }
 
     /* Arreglo del sobre en el boton de contacto - NO TOCAR */
@@ -205,7 +210,8 @@ h3{
             display: flex;
         }
             .footerImgWebsites:hover {
-                animation: headshake 1s;
+                animation: headshake 3s;
+                animation-iteration-count: infinite;
             }  
 
         /* Correcciones texto de footer */
