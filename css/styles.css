@@ -5,12 +5,25 @@
     border: none;
 }
 
+*::selection{
+    color: #56007e;
+    background-color: rgba(169, 109, 189, 0.671);
+}
+
 /* Importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
-
+/* KEYFRAMES */
+    /* Headshake */
+    @keyframes headshake{
+        0%   { transform: scale(1.1) rotate(10deg); }
+        25%  { transform: scale(1.08) rotate(-10deg); }
+        50%  { transform: scale(1.06) rotate(10deg); }
+        75%  { transform: scale(1.03) rotate(-10deg); }
+        100% { transform: scale(1) rotate(0deg); }
+    }
+    
 /* CORRECCIONES GENERALES */
-
 
 body{
     background-color: /*#09072f*/ white;
@@ -64,6 +77,17 @@ h3{
         list-style: none;
         font-size: 1.875rem;
         font-family: 'Fredoka One', cursive;
+        transition-duration: 0.5s;
+    }
+
+    /* hover en HEADER */
+    header nav ul li:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    header nav ul li a:hover{
+        color: rgb(152, 151, 156);
+        text-decoration: underline;
     }
 
     /* Configuracion del logo principal */
@@ -119,6 +143,9 @@ h3{
         right: 0;
         font-size: 1.125rem;
     }
+        .contactButtonBox:hover{
+            animation: headshake 1s;
+        }
 
     /* Arreglo del sobre en el boton de contacto - NO TOCAR */
         .fixedLetter {
@@ -182,6 +209,10 @@ h3{
             align-items: center;
             display: flex;
         }
+            .footerImgWebsites:hover {
+                animation: headshake 3s;
+                animation-iteration-count: infinite;
+            }  
 
         /* Correcciones texto de footer */
         .centerText{
@@ -580,6 +611,15 @@ h3{
         header nav li:hover .menuResponsive{
             display: flex;
             flex-direction: column;
+        }
+
+        /* hover en HEADER (no responsive)*/
+        header nav ul li:hover{
+            transform: none;
+        }
+        header nav ul li a:hover{
+            color: rgb(255, 255, 255);
+            text-decoration: none
         }
 }
 
